@@ -42,10 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void left(View v){
         point = point +1 ;
-        textView.setText(""+point+"回");//6
+        textView.setText(""+point+"回");
         if (point == 250){
-            textView.setText("WIN");//6//3
-            textView2.setText("LOSE");//3//5
+            //押した回数が250回になったら勝敗が決まる
+            textView.setText("WIN");
+            textView2.setText("LOSE");
             button.setEnabled(false);
             button2.setEnabled(false);
             button3.setEnabled(false);
@@ -55,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void right(View v){
         point = point + 1 ;
-        textView.setText(""+point+"回");//6
+        textView.setText(""+point+"回");
         if (point == 250){
-            textView.setText("WIN");//6//3
-            textView2.setText("LOSE");//3//5
+            textView.setText("WIN");
+            textView2.setText("LOSE");
             button.setEnabled(false);
             button2.setEnabled(false);
             button3.setEnabled(false);
