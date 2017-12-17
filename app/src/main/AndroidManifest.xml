@@ -8,19 +8,33 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".TimeActivity"/>
-        <activity android:name=".RealTimeActivity"/>
-        <activity android:name=".SeikoActivity"/>
-        <activity
-                android:name=".StartActivity">
+
+        <service
+            android:name="InputIME"
+            android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <actio android:name = "android.view.InputMethod"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method"/>
+        </service>
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".TimeActivity"/>
+        <activity
+            android:name=".RealTimeActivity"
+            android:action="@string/action_settings" >
+
         </activity>
 
+        <activity android:name=".SeikoActivity"/>
+
     </application>
+
+
 
 </manifest>

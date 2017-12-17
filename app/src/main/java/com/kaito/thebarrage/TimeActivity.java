@@ -26,6 +26,7 @@ public class TimeActivity extends AppCompatActivity {
         setContentView(R.layout.time_activity);
         imageButton = (ImageButton)findViewById(R.id.hair);
         imageView = (ImageView)findViewById(R.id.sorry);
+        button = (Button)findViewById(R.id.startw);
 
         if (Build.VERSION.SDK_INT >= 19){
             Window window = getWindow();
@@ -39,7 +40,7 @@ public class TimeActivity extends AppCompatActivity {
 
     public void hair(View v){
         count = count + 1 ;
-        if (count == 14){
+        if (count % 14 == 0){
             Intent intent = new Intent(this,RealTimeActivity.class);
             startActivity(intent);
         }
