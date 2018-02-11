@@ -1,18 +1,19 @@
 package com.kaito.thebarrage;
+
 import android.content.Intent;
 import android.os.Build;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
-import android.os.CountDownTimer;
 
 public class SeikoActivity extends AppCompatActivity {
     TextView textView ;
     TextView textView2 ;
+    TextView startBack;
     Button button ;
     Button button2 ;
     Button button3 ;
@@ -27,6 +28,7 @@ public class SeikoActivity extends AppCompatActivity {
         setContentView(R.layout.seiko_activity);
         textView = (TextView)findViewById(R.id.textView);
         textView2 = (TextView)findViewById(R.id.textView2);
+        startBack = (TextView)findViewById(R.id.startBack);
         button = (Button)findViewById(R.id.button);
         button2 = (Button)findViewById(R.id.button2);
         button3 = (Button)findViewById(R.id.button3);
@@ -38,7 +40,18 @@ public class SeikoActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 int time = (int)millisUntilFinished / 1000;
                 ((TextView)findViewById(R.id.tv)).setText("あと" + time + "秒");
+
+                switch(startBack.getVisibility()){
+                    case View.VISIBLE:
+                        startBack.setVisibility(View.GONE);
+                        break;
+                    case View.GONE:
+                        startBack.setVisibility(View.GONE);
+                        break;}
+
             }
+
+
 
             @Override
             public void onFinish() {
@@ -46,6 +59,13 @@ public class SeikoActivity extends AppCompatActivity {
                 button2.setEnabled(false);
                 button3.setEnabled(false);
                 button4.setEnabled(false);
+
+                switch(startBack.getVisibility()){
+                    case View.VISIBLE:
+                    case View.GONE:
+                        startBack.setVisibility(View.VISIBLE);
+                        break;}
+
 
 
                 if (point > point2){
@@ -57,6 +77,8 @@ public class SeikoActivity extends AppCompatActivity {
                     textView2.setText("WIN");
                     textView.setText("LOSE");
                 }
+
+
 
             }
         }.start();
@@ -92,6 +114,12 @@ public class SeikoActivity extends AppCompatActivity {
     public void left2(View v){
         point2 = point2 + 1;
         textView2.setText(point2 +"回");
+
+    }
+
+    public void startBack(View v){
+        Intent intent = new Intent(this,StartActivity.class);
+        startActivity(intent);
 
     }
 

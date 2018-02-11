@@ -12,6 +12,7 @@
         <activity android:name=".TimeActivity"/>
         <activity android:name=".RealTimeActivity"/>
         <activity android:name=".SeikoActivity"/>
+        <activity android:name=".AnswerActivity"/>
         <activity
                 android:name=".StartActivity">
             <intent-filter>

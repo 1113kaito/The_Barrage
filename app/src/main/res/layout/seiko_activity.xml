@@ -88,5 +88,16 @@
         android:textSize="30sp"
         android:textAlignment="center" />
 
+    <Button
+        android:text="タイトル"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv"
+        android:rotation="90"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/startBack"
+        android:onClick="startBack" />
+
 
 </RelativeLayout>
