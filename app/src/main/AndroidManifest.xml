@@ -13,15 +13,15 @@
         <activity android:name=".RealTimeActivity"/>
         <activity android:name=".SeikoActivity"/>
         <activity android:name=".AnswerActivity"/>
-        <activity
-                android:name=".StartActivity">
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+
     </application>
+
+
 
 </manifest>

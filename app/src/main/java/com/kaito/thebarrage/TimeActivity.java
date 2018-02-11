@@ -56,7 +56,6 @@ public class TimeActivity extends AppCompatActivity {
 
 
 
-
         if (Build.VERSION.SDK_INT >= 19){
             Window window = getWindow();
             View view = window.getDecorView();

@@ -69,12 +69,23 @@ public class RealTimeActivity extends AppCompatActivity {
         }
     }
 
+    public void ok(View v) {
+
+        String str = editText.getText().toString();
 
 
+        if (str.equals("↑↑↓↓←→←→BA")) {
+            Intent intent = new Intent(this, SeikoActivity.class);
+            startActivity(intent);
+        } else if (str.equals("上上下下左右左右BA")) {
+            Intent intent = new Intent(this, SeikoActivity.class);
+            startActivity(intent);
+        } else if (str.equals("うえうえしたしたひだりみぎひだりみぎBA")) {
+            Intent intent = new Intent(this, SeikoActivity.class);
+            startActivity(intent);
+        }
 
-
-
-
+    }
 
     public void answer(View v){
         Intent intent = new Intent(this,AnswerActivity.class);
@@ -135,5 +146,4 @@ public class RealTimeActivity extends AppCompatActivity {
             mKeyboardView.showWithAnimationStart(animation);
         }
     }
-
 }

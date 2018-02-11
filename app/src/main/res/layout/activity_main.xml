@@ -88,4 +88,15 @@
         android:layout_alignParentEnd="true"
         android:layout_width="150dp" />
 
+    <Button
+        android:text="タイトル"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:rotation="90"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/title"
+        android:onClick="title" />
+
 </RelativeLayout>
